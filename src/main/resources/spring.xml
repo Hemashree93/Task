@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean class="com.xworkz.hema.hemaa.Fuel" id="fuel">
+	<constructor-arg value="3"/>
+	</bean>
+
+	<bean class="com.xworkz.hema.hemaa.Satalite" id="satalite">  
+		<property name="Launched" value="12"/>
+		<property name="Location" value="Banglore"/>
+
+	</bean>
+	
+	
+	
+	<bean class="com.xworkz.hema.hemaa.Rocket" > 
+		<constructor-arg ref="fuel"/>
+		<property name="sat" ref="satalite"/>
+		<property name="CountryName" value="India"/>
+	</bean>
+	
+	<bean class="com.xworkz.hema.hemaa.ThreadImpl" id="threadImpl">
+	</bean>
+	
+	<bean class="com.xworkz.hema.hemaa.Labour" id="">
+	<constructor-arg value="abc cde"/>
+	<property name="Exprience" value="12345"/>
+	<property name="ThreadImpl" ref="threadImpl"/>
+	
+	</bean>
+	
+	  
+	
+	
+	
+	
+	
+	
+
+	
+	
+
+
+</beans>
